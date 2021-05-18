@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<!------ header 영역---->
+<head>
+    <div th:replace="/body/header.html :: body-header"></div>
+</head>
+<body>
+<!------- navaigator영역--->
+<div th:replace="/body/navaigator.html :: body-navaigator"></div>
+<!---- main content 영역--->
+<div class="row">
+    <div class="left">
+        <div class="card">
+            <h2>맞춤검색창</h2>
+            <h5>선택해주세요.</h5>
+            <div class="fakeimg" style="height: 200px";>미구현</div>
+            <h5>아직 미구현</h5>
+            <p>2</p>
+            <p>3</p>
+        </div>
+    </div>
+
+<!------ sidebar content 영역 --->
+    <div class="right">
+        <div class="card">
+        <h2>복지 서비스 바로가기</h2>
+        <div class="fakeimg" style="height: 100px;">미구현</div>
+        <h2>영역</h2>
+        <div class="fakeimg" style="height: 100px;">미구현</div>
+        <p>하기 귀찮다</p>
+        </div>
+     </div>
+</div>
+<!---footer 영역 --->
+<footer th:replace="/body/footer.html :: body-footer"></footer>
+</body>
+</html>
