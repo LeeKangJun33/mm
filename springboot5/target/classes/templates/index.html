@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns="http://www.w3.org/1999/html"
+      layout:decorator="~{layout/layout}">
+
+<th:block layout:fragment="content">
+    <!-- Begin Page Content -->
+    <div class="main-wraper">
+        <div id="content" class="main-contener">
+    <div class="floor1-right">
+        <div class="main-radio">
+            <div class="main-title bg2">공공복지서비스<br><strong>맞춤검색</strong></div>
+            <form name="searchForm" id="searchForm" method="post">
+                <div class="about-28px">
+                    <div class="select-list tap1-con on" id="tab1">
+                        <ul class="cfix">
+                            <li>
+                                <select name="age" id="age" title="출생연도" style="height:40px; font-size:15px;">
+                                    <option value="all" selected="selected">출생연도 선택</option>
+                                    <option value="65">1956년 이전</option><option value="65">1956</option><option value="64">1957</option><option value="63">1958</option><option value="62">1959</option><option value="61">1960</option><option value="60">1961</option><option value="59">1962</option><option value="58">1963</option><option value="57">1964</option><option value="56">1965</option><option value="55">1966</option><option value="54">1967</option><option value="53">1968</option><option value="52">1969</option><option value="51">1970</option><option value="50">1971</option><option value="49">1972</option><option value="48">1973</option><option value="47">1974</option><option value="46">1975</option><option value="45">1976</option><option value="44">1977</option><option value="43">1978</option><option value="42">1979</option><option value="41">1980</option><option value="40">1981</option><option value="39">1982</option><option value="38">1983</option><option value="37">1984</option><option value="36">1985</option><option value="35">1986</option><option value="34">1987</option><option value="33">1988</option><option value="32">1989</option><option value="31">1990</option><option value="30">1991</option><option value="29">1992</option><option value="28">1993</option><option value="27">1994</option><option value="26">1995</option><option value="25">1996</option><option value="24">1997</option><option value="23">1998</option><option value="22">1999</option><option value="21">2000</option><option value="20">2001</option><option value="19">2002</option><option value="18">2003</option><option value="17">2004</option><option value="16">2005</option><option value="15">2006</option><option value="14">2007</option><option value="13">2008</option><option value="12">2009</option><option value="11">2010</option><option value="10">2011</option><option value="9">2012</option><option value="8">2013</option><option value="7">2014</option><option value="6">2015</option><option value="5">2016</option><option value="4">2017</option><option value="3">2018</option><option value="2">2019</option><option value="1">2020</option><option value="0">2021</option></select>
+                            </li>
+                            <li>
+                                <select id="sex" name="sex" title="성별 선택" style="height:40px; font-size:15px;">
+                                    <option value="all" selected="selected">성별 선택</option>
+                                    <option value="M">남</option>
+                                    <option value="F">여</option>
+                                </select>
+                            </li>
+                            <li>
+                                <select id="rating" name="rating" title="장애정도 선택" style="height:40px; font-size:15px;">
+                                    <option value="">장애정도 선택</option>
+                                    <option value="Y">심한 장애</option>
+                                    <option value="N">심하지 않은 장애</option>
+                                </select>
+                            </li>
+                            <li>
+                                <select id="disability" name="disability" title="장애 종류 선택" style="height:40px; font-size:15px;">
+
+                                    <option value="all">장애유형 선택</option><option value="ha">지체</option><option value="br">뇌병변</option><option value="vi">시각</option><option value="he">청각</option><option value="sp">언어</option><option value="in">지적</option><option value="ja">자폐성</option><option value="me">정신</option><option value="ki">신장</option><option value="hea">심장</option><option value="re">호흡기</option><option value="hep">간</option><option value="fa">안면</option><option value="os">장루/요루</option><option value="ep">뇌전증</option></select>
+                            </li>
+                            <li>
+                                <select name="income" title="소득기준 선택" style="height:40px; font-size:15px;">
+                                    <option value="all" selected="selected">소득기준 선택</option>
+                                    <option value="01">기초생활수급자</option>
+                                    <option value="02">차상위계층</option>
+                                    <option value="03">중위소득 50%초과~120%이하</option>
+                                    <option value="04">중위소득 120%초과~180%이하</option>
+                                    <option value="05">기준없음</option>
+                                </select>
+                            </li>
+                            <li>
+                                <select name="household" id="household" title="가구기준 선택" style="height:40px; font-size:15px;">
+                                    <option value="all" selected="selected">가구기준 선택</option>
+                                    <option value="1">독거 한정</option>
+                                    <option value="2">비독거 한정</option>
+                                </select>
+                            </li>
+                            <li>
+                                <select name="bsnsArea" id="bsnsArea" title="사업수혜지역 선택" style="height:40px; font-size:15px;">
+                                    <option value="all" selected="selected">사업수혜지역 선택</option>
+                                    <option value="S">서울시 한정</option>
+                                    <option value="A">전국</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="select-list tap2-con" id="tab2">
+                        <ul class="cfix">
+                            <li>
+                                <select name="age2" id="age2" title="연령별 선택">
+                                    <option value="all">연령별 전체</option>
+                                    <option value="A">5세 미만</option>
+                                    <option value="B">18세 미만</option>
+                                    <option value="C">18~34세</option>
+                                    <option value="D">35~64세</option>
+                                    <option value="E">65세 이상</option>
+                                </select>
+                            </li>
+                            <li>
+                                <select name="disabled" id="disabled" title="개인별여건 선택">
+                                    <option value="all">개인별여건 전체</option>
+                                    <option value="A">일반</option>
+                                    <option value="B">질병/요양/치매</option>
+                                    <option value="C">여성/아동/청소년/외국인</option>
+                                    <option value="D">보훈대상</option>
+                                </select>
+                            </li>
+                            <li>
+                                <select name="income" id="income" title="소득수준 선택">
+                                    <option value="all">소득수준 전체</option>
+                                    <option value="A">일반</option>
+                                    <option value="B">저소득</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="select-list tap3-con" id="tab3">
+                        <ul class="only cfix">
+                            <li><select name="schAtdrcCd" id="schAtdrcCd" title="복지시설 지역선택"><option value="">복지시설 지역선택</option><option value="">전체</option><option value="11110">종로구</option><option value="11140">중구</option><option value="11170">용산구</option><option value="11200">성동구</option><option value="11215">광진구</option><option value="11230">동대문구</option><option value="11260">중랑구</option><option value="11290">성북구</option><option value="11305">강북구</option><option value="11320">도봉구</option><option value="11350">노원구</option><option value="11380">은평구</option><option value="11410">서대문구</option><option value="11440">마포구</option><option value="11470">양천구</option><option value="11500">강서구</option><option value="11530">구로구</option><option value="11545">금천구</option><option value="11560">영등포구</option><option value="11590">동작구</option><option value="11620">관악구</option><option value="11650">서초구</option><option value="11680">강남구</option><option value="11710">송파구</option><option value="11740">강동구</option></select></li>
+                            <li><select name="fcltyKind" id="fcltyKind" title="복지시설 종류선택"><option value="">복지시설 종류선택</option><option value="1209">(건강) 건강기타</option><option value="1701">(건강가정) 건강가정지원센터</option><option value="0801">(결핵한센인) 결핵한센시설</option><option value="1901">(기타) 기타시설</option><option value="0509">(노숙인등) 노숙인등기타</option><option value="0501">(노숙인등) 노숙인등생활시설</option><option value="0502">(노숙인등) 노숙인등이용시설</option><option value="0109">(노인) 노인기타</option><option value="0105">(노인) 노인보호전문기관</option><option value="0103">(노인) 노인여가복지시설</option><option value="0102">(노인) 노인의료복지시설</option><option value="0107">(노인) 노인일자리지원기관</option><option value="0101">(노인) 노인주거복지시설</option><option value="0104">(노인) 재가노인복지시설</option><option value="1409">(다문화가족) 다문화가족기타</option><option value="1401">(다문화가족) 다문화가족복지시설</option><option value="0209">(아동) 아동기타</option><option value="0201">(아동) 아동복지시설</option><option value="1009">(여성) 여성기타</option><option value="1101">(영유아) 보육시설</option><option value="1109">(영유아) 영유아기타</option><option value="0601">(일반) 일반사회복지시설</option><option value="0301">(장애인) 장애인거주시설</option><option value="0309">(장애인) 장애인기타</option><option value="0305">(장애인) 장애인생산품판매시설</option><option value="0304">(장애인) 장애인의료재활시설</option><option value="0302">(장애인) 장애인지역사회재활시설</option><option value="0303">(장애인) 장애인직업재활시설</option><option value="0701">(저소득) 자활시설</option><option value="0409">(정신보건) 정신보건기타</option><option value="0402">(정신보건) 정신요양시설</option><option value="0403">(정신보건) 정신재활시설</option><option value="1302">(청소년) 청소년복지시설</option><option value="0909">(한부모가족) 한부모가족기타</option><option value="0901">(한부모가족) 한부모가족복지시설</option></select></li>
+                        </ul>
+                    </div>
+                    <a class="search-button" href="javascript:;" onclick="go_search();" id="searchBtn"><span>검색하기</span></a>
+                    <input type="hidden" id="signguNm" name="signguNm" value="">
+                    <input type="hidden" id="gubun" name="gubun" value="1">
+                </div>
+            </form>
+            </form>
+        </div>
+    </div>
+                </div>
+            </div>
+    <div class="main-icon">
+    <div class="main-title bg1">
+        <Strong>공공복지서비스</Strong>
+        <br>바로가기
+    </div>
+    <ul class="cfix">
+        <li>
+            <a href="https://wis.seoul.go.kr/handicap/life/specialProvision.do" target="_blank">
+                <span>
+                    <img src="/bootstrap/img/main/main_bg4.png" alt="장애인특별공급">
+                    <br>장애인특별공급</br>
+                </span>
+
+            </a>
+        </li>
+        <li class="addstyle">
+        <a href="https://seoul.chest.or.kr/bridgelink.do?pBranchCd=002&bhfCode=002&_mid=00_00_00&_murl=L2NhL3NwZWNsbXlzL2luaXRTcGVjbG15c0RldGFpbC5kbz9teXNzcGVjbGVTbj0yOA==" target="_blank">
+            <span>
+                <img src="/bootstrap/img/main/addmain_bg12.png" alt="취약계층을위한 기부캠패인">
+                <br>취약계층을위한 기부캠페인</br>
+            </span>
+        </a>
+        </li>
+        <li>
+            <a href="https://wis.seoul.go.kr/hope/service/public/welfaresupport.do" target="_blank">
+            <span>
+                <img src="/bootstrap/img/main/addmain_bg13.png" alt="긴급복지지원제도">
+                    <br>긴급복지지원제도</br>
+            </span>
+                </a>
+        </li>
+<li>
+    <a href="https://wis.seoul.go.kr/hope/societyService.do" target="_blank">
+        <span>
+            <img src="bootstrap/img/main/addmain_bg14.png" alt="지역사회서비스">
+            <br>지역사회서비스</br>
+        </span>
+    </a>
+</li>
+    </ul>
+</div>
+
+</th:block>
+</th:block>
+</html>
