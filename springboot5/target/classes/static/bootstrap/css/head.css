@@ -1,0 +1,22 @@
+.outer{
+    text-align: center;
+}
+@media screen and(max-width: 1024px) {
+    .main-select{
+        width: 100%;
+        margin: 15px 0 0;
+    }
+}
+.main-select{
+    float: left;
+    width: 336px;
+    height: 504px;
+    padding-top: 30px;
+    background: #1c294e;
+    height: 360px;
+    padding-top: 30px;
+    border-radius: 5px;
+}
+.main-select>ul{
+    padding: 0 15px;
+}
